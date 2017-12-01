@@ -7,7 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Create<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?php echo url('/'); ?>/create">Create<span class="sr-only">(current)</span></a>
       </li>
      <li class="nav-item active">
         <a class="nav-link" href="#">Edit<span class="sr-only">(current)</span></a>

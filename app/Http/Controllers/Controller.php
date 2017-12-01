@@ -14,4 +14,9 @@ class Controller extends BaseController{
     	$data['data'] = \DB::table('product')->get();
     	return view('welcome', $data);
     }
+
+    public function create(){
+    	$data['data'] = \DB::table('product')->get();
+    	return view('welcome', $data);
+    }
 }

@@ -11,17 +11,54 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
     <!-- Styles -->
-    <style>           
+    <style>    
+    img{
+        height: 50%;
+        width: auto;
+    }   
+    .price{
+        font-weight: bold;
+    }    
 </style>
 </head>
 <body>
-   @include('navbar')
+ @include('navbar')
 
-   <div class="container">
-     @foreach ($data as $d)
-     <p>This is user {{ $d->Name }}</p>
-     @endforeach
- </div>
+ <div class="container">
+   <h1 align="center">Product List</h1>
+
+    <div class="row">
+        <?php $i = 1 ?>
+        @foreach ($data as $d)
+        @if($i <= 4)
+        <div class="card col-sm" style="width: 20rem;">
+            <img class="card-img-top" src="{{ $d->Image }}" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title"> {{ $d->Name }}</h4>
+                <p class="card-text"> {{ $d->Description }} <br> <span class="price">Price:</span> {{ $d->Price }} </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <?php $i++ ?>
+        @else
+    </div>
+    <br>
+    <div class="row">
+        <div class="card col-sm" style="width: 20rem;">
+            <img class="card-img-top" src="{{ $d->Image }}" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title"> {{ $d->Name }}</h4>
+                <p class="card-text"> {{ $d->Description }} <br> <span class="price">Price:</span> {{ $d->Price }}</p>
+
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <?php $i = 1 ?>
+        @endif
+
+        @endforeach
+    </div>
+</div>
 
 </body>
 </html>
