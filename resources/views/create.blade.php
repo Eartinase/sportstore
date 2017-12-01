@@ -27,7 +27,8 @@
    <div class="container">
     <h1 align="center">Create Product</h1>
 
-    <form action="<?php echo url('/'); ?>/createSubmit" method="post">
+    <form action="<?php echo url('/'); ?>/createSubmit" >
+        {{ csrf_field() }}
         Product Name: <input type="text" name="name"  class="form-control" required><br>
         Description: <textarea  class="form-control" name="desc" ></textarea><br>
         Category: <select  class="form-control" required>

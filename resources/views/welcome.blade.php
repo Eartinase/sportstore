@@ -30,12 +30,12 @@
     <div class="row">
         <?php $i = 1 ?>
         @foreach ($data as $d)
-        @if($i <= 4)
-        <div class="card col-sm" style="width: 20rem;">
+        @if($i <= 3)
+        <div class="card col-4" style="width: 20rem;">
             <img class="card-img-top" src="{{ $d->Image }}" alt="Card image cap">
             <div class="card-body">
-                <h4 class="card-title"> {{ $d->Name }}</h4>
-                <p class="card-text"> {{ $d->Description }} <br> <span class="price">Price:</span> {{ $d->Price }} </p>
+                <h4 class="card-title"> {{ $d->Name }} </h4>
+                <p class="card-text">{{$i}} {{ $d->Description }} <br> <span class="price">Price:</span> {{ $d->Price }} </p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>
@@ -44,16 +44,17 @@
     </div>
     <br>
     <div class="row">
-        <div class="card col-sm" style="width: 20rem;">
+                <?php $i = 1 ?>
+        <div class="card col-4" style="width: 20rem;">
             <img class="card-img-top" src="{{ $d->Image }}" alt="Card image cap">
             <div class="card-body">
                 <h4 class="card-title"> {{ $d->Name }}</h4>
-                <p class="card-text"> {{ $d->Description }} <br> <span class="price">Price:</span> {{ $d->Price }}</p>
+                <p class="card-text"> {{$i++}}{{ $d->Description }} <br> <span class="price">Price:</span> {{ $d->Price }}</p>
 
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>
-        <?php $i = 1 ?>
+
         @endif
 
         @endforeach

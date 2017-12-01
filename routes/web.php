@@ -14,5 +14,5 @@
 Route::get('/', 'controller@index');
 
 Route::get('/create', 'CreateController@index');
+Route::get('/createSubmit', 'CreateController@create');
 
-Route::get('/NamelistController', 'NamelistController@index');
