@@ -13,4 +13,6 @@
 
 Route::get('/', 'controller@index');
 
+Route::get('/create', 'CreateController@index');
+
 Route::get('/NamelistController', 'NamelistController@index');
