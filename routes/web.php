@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'controller@index');
+
+Route::get('/NamelistController', 'NamelistController@index');
