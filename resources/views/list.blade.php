@@ -38,16 +38,12 @@
                 <th>Name</th>
                 <th>Img</th> 
                 <th>Category</th>
-                <th>Description</th>
-                
-                <th>Price</th>
-                
+                <th>Description</th>                
+                <th>Price</th>                
                 <th>Edit</th>              
             </tr>
         </thead>
-       </table>
-   
-   
+       </table> 
 
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

@@ -10,10 +10,13 @@
         <a class="nav-link" href="<?php echo url('/'); ?>/create">Create<span class="sr-only">(current)</span></a>
       </li>    
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo url('/'); ?>/list">List<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?php echo url('/'); ?>/list">Product<span class="sr-only">(current)</span></a>
+      </li> 
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo url('/'); ?>/category">Category<span class="sr-only">(current)</span></a>
       </li>     
     </ul>
-    
+
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Username" aria-label="Search">
       <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Search">
