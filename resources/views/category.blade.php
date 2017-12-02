@@ -47,13 +47,14 @@
           <tr>
             <td>{{$i++}}</td>
             <td>{{$d->Name}}</td>
-            <td><button class="btn btn-info">Edit</button>&nbsp;<button class="btn btn-danger">Delete</button></td>
+            <td><button class="btn btn-info">Edit</button>&nbsp;
+            <button class="btn btn-danger" name="id" value="{{$d->CatId}}" form="delCat">Delete</button></td>
           </tr>
           @endforeach
         </tbody>
       </table>
 
-      
+      <form action="<?php echo url('/'); ?>/delCat" id="delCat"></form>
 
       <!-- Modal -->
       <div class="modal fade" id="addCategory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

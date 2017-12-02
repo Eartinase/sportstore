@@ -22,5 +22,6 @@ Route::get('/createSubmit', 'CreateController@create');
 
 Route::get('/category', 'CategoryController@index');
 Route::get('/createCat', 'CategoryController@createCat');
+Route::get('/delCat', 'CategoryController@delCat');
 
 Route::get('/listController/ajax_getList', 'ListController@ajax_getList');
