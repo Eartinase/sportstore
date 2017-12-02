@@ -32,26 +32,31 @@
 
   <form action="<?php echo url('/'); ?>/editSubmit" >
    <input type="text" name="id" style="display:none" value="{{$d->Id}}">
-    Product Name: <input type="text" name="name" value="{{$d->Name}}" class="form-control" required><br>
-    Description: <textarea  class="form-control" name="desc" >{{ $d->Description }}</textarea><br>
-    Category: <select  class="form-control" name="cat" required>
-      <option value="">Please Select</option>
-      @foreach ($cat as $c)
-      <option value="{{ $d->CatId }}">{{ $c->Name }}</option>
-      @endforeach
+   Product Name: <input type="text" name="name" value="{{$d->Name}}" class="form-control" required><br>
+   Description: <textarea  class="form-control" name="desc" >{{ $d->Description }}</textarea><br>
+   Category: <select  class="form-control" name="cat" required>
+    <option value="">Please Select</option>
+    @foreach ($cat as $c)
+    @if($c->CatId == $d->CatId)
+    <option value="{{ $d->CatId }}" selected>{{ $c->Name }}</option>
+    @else
+    <option value="{{ $d->CatId }}" >{{ $c->Name }}</option>
+    @endif
 
-    </select><br>
-    Price: <input  class="form-control" type="number" name="price" value="{{$d->Price}}"  required><br>
+    @endforeach
 
-    Image URL: <br>
-    <img src="{{$d->Image}}" class="col-md">
+  </select><br>
+  Price: <input  class="form-control" type="number" name="price" value="{{$d->Price}}"  required><br>
 
-    <input class="col-md form-control" type="text" name="image" value="{{$d->Image}}" required><br>
-    <div align="center">
-     <button type="submit" class="btn btn-success">Confirm</button>
-   </div>
-   @endforeach
- </form>
+  Image URL: <br>
+  <img src="{{$d->Image}}" class="col-md">
+
+  <input class="col-md form-control" type="text" name="image" value="{{$d->Image}}" required><br>
+  <div align="center">
+   <button type="submit" class="btn btn-success">Confirm</button>
+ </div>
+ @endforeach
+</form>
 </div>
 
 
