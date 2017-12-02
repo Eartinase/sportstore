@@ -35,7 +35,7 @@
             <img class="card-img-top" src="{{ $d->Image }}" alt="Card image cap">
             <div class="card-body">
                 <h4 class="card-title"> {{ $d->Name }} </h4>
-                <p class="card-text">{{$i}} {{ $d->Description }} <br> <span class="price">Price:</span> {{ $d->Price }} </p>
+                <p class="card-text"> {{ $d->Description }} <br> <span class="price">Price:</span> {{ $d->Price }} </p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>
@@ -49,7 +49,7 @@
             <img class="card-img-top" src="{{ $d->Image }}" alt="Card image cap">
             <div class="card-body">
                 <h4 class="card-title"> {{ $d->Name }}</h4>
-                <p class="card-text"> {{$i++}}{{ $d->Description }} <br> <span class="price">Price:</span> {{ $d->Price }}</p>
+                <p class="card-text"> {{ $d->Description }} <br> <span class="price">Price:</span> {{ $d->Price }}</p>
 
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>

@@ -13,7 +13,7 @@
         <a class="nav-link" href="#">Edit<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">List<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?php echo url('/'); ?>/list">List<span class="sr-only">(current)</span></a>
       </li>
      
       

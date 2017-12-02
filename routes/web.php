@@ -15,4 +15,6 @@ Route::get('/', 'controller@index');
 
 Route::get('/create', 'CreateController@index');
 Route::get('/createSubmit', 'CreateController@create');
+Route::get('/list', 'ListController@index');
+Route::get('/listController/ajax_getList', 'ListController@ajax_getList');
 
