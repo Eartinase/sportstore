@@ -26,26 +26,33 @@
  <div class="container">
    <h1 align="center">List</h1>
 
-   <form action="<?php echo url('/'); ?>/edit">
+   <form action="<?php echo url('/'); ?>/edit" id="edit">
+    </form>
+
+    <form action="<?php echo url('/'); ?>/delete" id="delete">
+    </form>
+
        <table id="listTable" class="display table">
            <thead>
             <tr>
                 <th>Name</th>
-                <th>Description</th>
-                <th>Category</th>
-                <th>Price</th>
                 <th>Img</th> 
+                <th>Category</th>
+                <th>Description</th>
+                
+                <th>Price</th>
+                
                 <th>Edit</th>              
             </tr>
         </thead>
        </table>
    
-   </form>
+   
 
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript">
+<script type="text/javascript">   
 
     $(document).ready(function(){
         $('#listTable').DataTable( {

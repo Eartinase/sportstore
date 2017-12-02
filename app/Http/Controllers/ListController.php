@@ -21,11 +21,12 @@ class ListController extends Controller
 		foreach ($product as $p){ 
 			$data[] = array(	
 				$p->Name,
-				$p->Description,
-				$p->cat,
-				$p->Price,
 				"<img src='".$p->Image."'>",
-				"<button class='btn btn-info' name='id' value='".$p->Id."'>Edit</button>"
+				$p->cat,
+				$p->Description,				
+				$p->Price,				
+				"<button class='btn btn-info' name='id' form='edit' value='".$p->Id."'>Edit</button>".
+				"<button class='btn btn-danger' name='id' form='delete' value='".$p->Id."'>Delete</button>"
 			);		
 		}			
 		

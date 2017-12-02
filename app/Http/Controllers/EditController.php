@@ -32,5 +32,12 @@ class EditController extends Controller
 		return view('list', $data);
 	}
 
+	public function delete(Request $request)
+	{
+		\DB::table('product')->where('Id', '=', $request->id)->delete();
+		$data['data'] = \DB::table('product')->get();
+		return view('list', $data);
+	}
+
 
 }
