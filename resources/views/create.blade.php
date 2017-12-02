@@ -31,10 +31,10 @@
         {{ csrf_field() }}
         Product Name: <input type="text" name="name"  class="form-control" required><br>
         Description: <textarea  class="form-control" name="desc" ></textarea><br>
-        Category: <select  class="form-control" required>
+        Category: <select  class="form-control" name="cat" required>
             <option value="">Please Select</option>
           @foreach ($data as $d)
-          <option value="{{ $d->Name }}">{{ $d->Name }}</option>
+          <option value="{{ $d->CatId }}">{{ $d->Name }}</option>
           @endforeach
 
       </select><br>

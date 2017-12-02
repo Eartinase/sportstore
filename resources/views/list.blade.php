@@ -34,7 +34,8 @@
                 <th>Description</th>
                 <th>Category</th>
                 <th>Price</th>
-                <th>Img</th>               
+                <th>Img</th> 
+                <th>Edit</th>              
             </tr>
         </thead>
        </table>

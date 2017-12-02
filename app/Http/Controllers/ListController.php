@@ -13,15 +13,19 @@ class ListController extends Controller
 	}
 
 	public function ajax_getList(){
-		$product = \DB::table('product')->get();
+		$product = \DB::table('product')
+		->join('category','product.CatId', '=', 'category.CatId')
+		->select('category.name as cat','product.*')
+		->get();
 		
 		foreach ($product as $p){ 
 			$data[] = array(	
 				$p->Name,
 				$p->Description,
-				$p->CatId,
+				$p->cat,
 				$p->Price,
-				"<img src='".$p->Image."'>"
+				"<img src='".$p->Image."'>",
+				"<button class='btn btn-info' value='".$p->Id."'>Edit</button>"
 			);		
 		}			
 		
