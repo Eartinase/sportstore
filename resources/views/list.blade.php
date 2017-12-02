@@ -26,8 +26,8 @@
  <div class="container">
    <h1 align="center">List</h1>
 
-   <div>
-       <table id="listTable" class="display">
+   <form action="<?php echo url('/'); ?>/edit">
+       <table id="listTable" class="display table">
            <thead>
             <tr>
                 <th>Name</th>
@@ -39,7 +39,8 @@
             </tr>
         </thead>
        </table>
-   </div>
+   
+   </form>
 
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

@@ -25,7 +25,7 @@ class ListController extends Controller
 				$p->cat,
 				$p->Price,
 				"<img src='".$p->Image."'>",
-				"<button class='btn btn-info' value='".$p->Id."'>Edit</button>"
+				"<button class='btn btn-info' name='id' value='".$p->Id."'>Edit</button>"
 			);		
 		}			
 		

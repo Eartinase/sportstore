@@ -13,17 +13,7 @@ class CreateController extends Controller
 		return view('create', $data);
 	}
 
-	public function create(Request $request){
-		/*
-		$cat = \DB::table('category')
-		->where('CatId', '=', $request->cat)
-		->get();
-	//	$cat = \DB::select('select CatId from category where CatId = ?', ['1' => $request->cat])->get();
-
-		foreach ($cat as $c) {
-			$result = $c->Name."";
-		}					
-*/
+	public function create(Request $request){		
 		\DB::table('product')->insert([
 			[
 				'Name'			=> $request->name,
