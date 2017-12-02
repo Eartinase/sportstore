@@ -11,7 +11,13 @@ class Controller extends BaseController{
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function index(){
-    	$data['data'] = \DB::table('product')->get();
+    //	$data['data'] = \DB::table('product')->get();
+
+    	$data['data'] = \DB::table('product')
+		->join('category','product.CatId', '=', 'category.CatId')
+		->select('category.name as cat','product.*')
+		->get();
+
     	return view('welcome', $data);
     }
 

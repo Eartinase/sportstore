@@ -15,7 +15,7 @@ class CategoryController extends Controller
 	public function createCat(Request $request){
 		\DB::table('category')->insert([
 			[
-				'Name'			=> $request->catName,				
+				'Name'	=> $request->catName,				
 			]
 		]);
 		

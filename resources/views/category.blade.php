@@ -47,8 +47,10 @@
           <tr>
             <td>{{$i++}}</td>
             <td>{{$d->Name}}</td>
-            <td><button class="btn btn-info">Edit</button>&nbsp;
-            <button class="btn btn-danger" onclick="cnfrm()" name="id" value="{{$d->CatId}}" form="delCat">Delete</button></td>
+            <td>
+              <button class="btn btn-info">Edit</button>&nbsp;
+            <button class="btn btn-danger" onclick="cnfrm()" name="id" value="{{$d->CatId}}" form="delCat">Delete</button>
+          </td>
           </tr>
           @endforeach
         </tbody>
