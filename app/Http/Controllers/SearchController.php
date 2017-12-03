@@ -33,8 +33,7 @@ class SearchController extends Controller
 		return view('search', $data);
 	}
 
-	public function json_search(Request $request)
-	{
+	public function json_search(Request $request){
 		if(isset($_GET['cat'])){
 			$sql='SELECT category.name AS cat, product.* '.
 			'FROM product '.

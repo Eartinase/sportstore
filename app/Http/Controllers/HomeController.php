@@ -12,8 +12,7 @@ class HomeController extends Controller
 			'email' => $request->usr ,
 			'password' => $request->psw
 		);
-
-				// attempt to do the login
+				
 		$data = \DB::table('user')
 		->where('Username', '=', $request->usr)
 		->get();
@@ -22,17 +21,12 @@ class HomeController extends Controller
 			$role = $d->Role;
 		}
 		if ($password == $request->psw){
-/*
-			$data = \DB::table('users')
-			->where('Username', '=', $request->usr)
-			->get();
-*/
+
 			\Session::put('Role', $role);
 			return \Redirect::to('/');
-		//	\Session::set('Role', $role);
+		
 		}
 		else{
-					// validation not successful, send back to form
 			return \Redirect::to('/');
 		}
 	}

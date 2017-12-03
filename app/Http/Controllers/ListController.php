@@ -6,10 +6,12 @@ use Illuminate\Http\Request;
 
 class ListController extends Controller
 {
-	public function index()
-	{
-		$data['data'] = \DB::table('product')->get();
-		return view('list', $data);
+	public function index(){
+		if(\Session::get('Role')=='admin'){
+			$data['data'] = \DB::table('product')->get();
+			return view('list', $data);
+		}
+		return redirect('/');
 	}
 
 	public function ajax_getList(){
