@@ -30,7 +30,7 @@
   <h2 align="center">{{ $d->Name }}</h2>
 
 
-  <form action="<?php echo url('/'); ?>/editSubmit" >
+  <form action="{{ url('/') }}/search" >
    <input type="text" name="id" style="display:none" value="{{$d->Id}}">
    Product Name: <input type="text" name="name" value="{{$d->Name}}" class="form-control" required><br>
    Description: <textarea  class="form-control" name="desc" >{{ $d->Description }}</textarea><br>
@@ -42,7 +42,6 @@
     @else
     <option value="{{ $d->CatId }}" >{{ $c->Name }}</option>
     @endif
-
     @endforeach
 
   </select><br>

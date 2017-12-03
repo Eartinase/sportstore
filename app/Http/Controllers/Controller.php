@@ -12,12 +12,13 @@ class Controller extends BaseController{
 
     public function index(){
     //	$data['data'] = \DB::table('product')->get();
-
     	$data['data'] = \DB::table('product')
 		->join('category','product.CatId', '=', 'category.CatId')
 		->select('category.name as cat','product.*')
 		->get();
 
+		$data['cat'] = \DB::table('category')->get();
+		
     	return view('welcome', $data);
     }
 

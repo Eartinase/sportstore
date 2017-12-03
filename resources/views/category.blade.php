@@ -28,22 +28,21 @@
   <h1 align="center" >Category</h1>
   <div align="right">
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addCategory">Create Category</button>
-
   </div>
   <br>
+
   <table class="table">
     <thead>
       <tr>
-
         <th scope="col">#</th>
         <th scope="col"> Category </td>
-          <th scope="col"> Action </td>
-
-          </tr>
-        </thead>
-        <tbody>
-          <?php $i=1 ?>
-          @foreach ($data as $d)
+        <th scope="col"> Action </td>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <?php $i=1 ?>
+      @foreach ($data as $d)
           <tr>
             <td>{{$i++}}</td>
             <td>{{$d->Name}}</td>
@@ -52,7 +51,7 @@
               <button class="btn btn-danger" name="id" value="{{$d->CatId}}" form="delCat">Delete</button>
             </td>
           </tr>
-          @endforeach
+      @endforeach
         </tbody>
       </table>
 
@@ -108,7 +107,6 @@
           </div>
         </div>
       </div>
-
      
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>

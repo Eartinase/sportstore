@@ -17,6 +17,8 @@ Route::get('/list', 'ListController@index');
 Route::get('/edit', 'EditController@edit');
 Route::get('/delete', 'EditController@delete');
 
+Route::get('/search', 'SearchController@search');
+
 Route::get('/editSubmit', 'EditController@editSubmit');
 Route::get('/createSubmit', 'CreateController@create');
 
