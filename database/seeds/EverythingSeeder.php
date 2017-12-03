@@ -24,6 +24,23 @@ class ProductSeeder extends Seeder
 			)
 		);
 
+		\DB::table('user')->delete();
+		user::create(
+			array(
+				'Username'     		=> 'admin',
+				'Password'     		=> '1234',
+				'Role'     			=> 'admin'				
+			)
+		);
+		user::create(
+			array(
+				'Username'     		=> 'user',
+				'Password'     		=> '1234',
+				'Role'     			=> 'user'		
+			)
+		);
+		
+
 		\DB::table('product')->delete();
 		product::create(
 			array(
