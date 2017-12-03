@@ -15,6 +15,7 @@ class Controller extends BaseController{
     	$data['data'] = \DB::table('product')
 		->join('category','product.CatId', '=', 'category.CatId')
 		->select('category.name as cat','product.*')
+		->orderBy('name')
 		->get();
 
 		$data['cat'] = \DB::table('category')->get();

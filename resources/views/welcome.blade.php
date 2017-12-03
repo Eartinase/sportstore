@@ -75,7 +75,7 @@
   </div>
   <div class="modal-body">
     <form action="{{ url('/') }}/search" id="search">
-        <b>Keyword:</b> <input type="text" name="keyword" class="form-control"><br><br>
+        <b>Input Item Name:</b> <input type="text" name="keyword" class="form-control"><br><br>
         <b>Category:</b> 
         <div class="form-check">
             @foreach($cat as $c)
