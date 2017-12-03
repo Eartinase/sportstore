@@ -9,8 +9,11 @@ class CreateController extends Controller
 {
 	public function index()
 	{
+		if(\Session::get('Role')=='admin'){
 		$data['data'] = \DB::table('category')->get();
 		return view('create', $data);
+	}
+	return redirect('/');
 	}
 
 	public function create(Request $request){		
