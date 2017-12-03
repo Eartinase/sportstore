@@ -28,3 +28,6 @@ Route::get('/editCat', 'CategoryController@editCat');
 Route::get('/delCat', 'CategoryController@delCat');
 
 Route::get('/listController/ajax_getList', 'ListController@ajax_getList');
+
+Route::post('/login', array('uses' => 'HomeController@doLogin'));
+Route::post('/logout', array('uses' => 'HomeController@doLogout'));
