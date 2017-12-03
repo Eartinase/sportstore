@@ -24,10 +24,13 @@
  <div class="container">
     <div align="center">
         <h1>Search Result</h1>
+
     </div>
+     @include('searchbox')
+        <br>
     <div class="row">
    <?php $i = 0 ?>
-    @foreach ($data as $d)
+    @foreach ($searchProduct as $d)
     @if($i < 4)
     <div class="card col-md-3">
         <img class="card-img-top" src="{{ $d->Image }}" alt="Card image cap">

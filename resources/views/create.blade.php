@@ -40,7 +40,7 @@
     Price: <input  class="form-control" type="number" name="price" required><br>
     Image URL: <input  class="form-control" type="text" name="image" required><br>
     <div align="center">
-     <button type="submit" class="btn btn-success">Confirm</button>
+     <button type="submit" class="btn btn-success">Create Product</button>
    </div>
  </form>
 </div>
