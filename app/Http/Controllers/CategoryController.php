@@ -27,4 +27,15 @@ class CategoryController extends Controller
 		\DB::table('category')->where('CatId', '=', $request->id)->delete();		
 		return redirect('/category');
 	}
+
+	public function editCat(Request $request)
+	{
+		\DB::table('category')
+		->where('CatId', $request->catId)
+		->update([
+			'Name'			=> $request->catName			
+		]);
+		$data['data'] = \DB::table('category')->get();
+		return redirect('/category');
+	}
 }

@@ -48,7 +48,7 @@
             <td>{{$i++}}</td>
             <td>{{$d->Name}}</td>
             <td>
-              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#EditCat">Edit</button>&nbsp;
+              <button type="button" class="buttValue btn btn-info" data-toggle="modal" data-target="#EditCat" value="{{ $d->CatId }}">Edit</button>&nbsp;
               <button class="btn btn-danger" name="id" value="{{$d->CatId}}" form="delCat">Delete</button>
             </td>
           </tr>
@@ -88,16 +88,17 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">New Category</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Edit Cat</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <form action="<?php echo url('/'); ?>/createCat">
+            <form action="{{url('/')}}/editCat">
               <div class="modal-body">
 
-                Category Name: 
+                New Category Name: 
                 <input type="text" name="catName" class="form-control">
+                <input type="text" id="id" value="" name="catId" style="display:none;">
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -108,9 +109,16 @@
         </div>
       </div>
 
-
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    </body>
-    </html>
+     
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function(){
+        $(".buttValue").click(function(){
+          $("#id").val($(this).val());
+        });
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+  </html>

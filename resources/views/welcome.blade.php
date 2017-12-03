@@ -31,7 +31,7 @@
         <?php $i = 0 ?>
         @foreach ($data as $d)
         @if($i < 4)
-        <div class="card col-3" style="width: 20rem;">
+        <div class="card col-sm-3" style="width: 20rem;">
             <img class="card-img-top" src="{{ $d->Image }}" alt="Card image cap">
             <div class="card-body">
                 <h4 class="card-title"> {{ $d->Name }} </h4>
@@ -46,7 +46,7 @@
     <br>
     <div class="row">
         <?php $i = 1 ?>
-        <div class="card col-3" style="width: 20rem;">
+        <div class="card col-sm-3" style="width: 20rem;">
             <img class="card-img-top" src="{{ $d->Image }}" alt="Card image cap">
             <div class="card-body">
                 <h4 class="card-title"> {{ $d->Name }}</h4>
