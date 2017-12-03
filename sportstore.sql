@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2017 at 02:06 PM
+-- Generation Time: Dec 03, 2017 at 05:25 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -41,7 +41,7 @@ INSERT INTO `category` (`CatId`, `Name`) VALUES
 (1, 'Food'),
 (2, 'Clothe'),
 (3, 'Sport Equipment'),
-(14, 'Happy');
+(15, 'Animal');
 
 -- --------------------------------------------------------
 
@@ -75,7 +75,12 @@ INSERT INTO `product` (`Id`, `Name`, `Description`, `CatId`, `Price`, `Image`) V
 (13, 'Balls Set', 'All type of balls at once. Good for ball lover.', 3, 315, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBtCWgWKkpmUYZpcgF39Bax6lsFj2hiNYogSbmswmh8PyxNxMA'),
 (14, 'Crispy Spring Rolls', 'Eat it.', 1, 12, 'https://eat24hours.com/files/cuisines/v4/thai.jpg?e24v=103?e24v=178?e24v=178'),
 (15, 'Sport Fruit', 'Eat it and become sport master!', 1, 75, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs9VtSuNUJZbOJ-MdZAB6smsA3zlOZJjQRgz4BDo0kaIhj3uRXJA'),
-(16, 'Hula Hula Eiyayaya Pai Tale', 'Stay with sea breeze with Hula Hula Eiyayaya Pai Tale.', 3, 620, 'https://www.canyonhoops.com/wp-content/uploads/2011/08/p-76292-1170.jpg');
+(16, 'Hula Hula Eiyayaya Pai Tale', 'Stay with sea breeze with Hula Hula Eiyayaya Pai Tale.', 3, 620, 'https://www.canyonhoops.com/wp-content/uploads/2011/08/p-76292-1170.jpg'),
+(17, 'Mr. Horse', 'Stallion ready for ride.Yeeha', 15, 12000, 'https://media1.britannica.com/eb-media/91/1291-004-8FED0EE7.jpg'),
+(18, 'Pan', 'Swing you hand with non-stick pan in your hand!', 3, 1200, 'https://images-na.ssl-images-amazon.com/images/I/318jcwVHWpL.jpg'),
+(19, 'Puffy Pie', 'Flaky salmon pie.', 1, 70, 'https://truffle-assets.imgix.net/4e897761-ho-221-herb-coated-salmon-in-puff-pastry-thumbnail-l-en-us.jpg'),
+(20, 'PiiiiiiZZa', 'Perfect for anyone who try to lose their weight', 1, 559, 'http://www.delonghi.com/Global/recipes/multifry/pizza_fresca.jpg'),
+(21, 'Pink Flamingo', 'Acting like a Red Queen. Use this flamingo as your hockey club. Don\'t know what I am talking about? Watch Alice in Wonderland!', 15, 999, 'https://www.photocase.com/photos/1504491-pink-flamingos-beautiful-animal-bird-bright-wild-animal-photocase-stock-photo-large.jpeg');
 
 -- --------------------------------------------------------
 
@@ -128,13 +133,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `CatId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `CatId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `user`
