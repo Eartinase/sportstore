@@ -91,19 +91,7 @@ class DatabaseSeeder extends Seeder
 				'Price'    		=> '699',
 				'CatId'		=>	'3',
 				'Image' 		=> 'https://www.canyonhoops.com/wp-content/uploads/2011/08/p-76292-1170.jpg',
-        ]);
-
+        ]);t		
 		
-		/*
-		product::create(
-			array(
-				'Name'     		=> 'Hula Hula Eiyayaya Pai Tale',
-				'Description' 	=> 'Stay with sea breeze with Hula Hula Eiyayaya Pai Tale.',
-				'Price'    		=> '699',
-				'CatId'		=>	'3',
-				'Image' 		=> 'https://www.canyonhoops.com/wp-content/uploads/2011/08/p-76292-1170.jpg',
-			)
-		);
-		*/
     }
 }

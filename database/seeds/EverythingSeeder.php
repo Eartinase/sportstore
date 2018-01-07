@@ -5,9 +5,7 @@ use Illuminate\Database\Seeder;
 class ProductSeeder extends Seeder
 {
 
-	public function run()
-	{
-		
+	public function run(){		
 	/*
     DB::table('users')->delete();
     User::create(array(
@@ -17,6 +15,6 @@ class ProductSeeder extends Seeder
         'password' => Hash::make('awesome'),
     ));
     */
-}
+	}
 
 }

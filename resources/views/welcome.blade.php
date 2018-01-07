@@ -26,7 +26,6 @@
   
 @include('searchbox')
 
-
    <br>
    <div class="row">
     <?php $i = 0 ?>
@@ -56,15 +55,17 @@
             <p class="card-text"> {{ $d->Description }} </p>
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item"><span class="bold">Category:</span> {{ $d->cat }}</li>
-            <li class="list-group-item"><span class="bold">Price:</span> {{ $d->Price }} </li>
+            <li class="list-group-item">
+                <span class="bold">Category:</span> {{ $d->cat }}
+            </li>
+            <li class="list-group-item">
+                <span class="bold">Price:</span> {{ $d->Price }} 
+        </li>
         </ul>
     </div>
     @endif
     @endforeach
 </div>
-
-
 
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
