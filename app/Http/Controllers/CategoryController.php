@@ -22,8 +22,7 @@ class CategoryController extends Controller
 		return redirect('/category');
 	}
 
-	public function delCat(Request $request){
-		
+	public function delCat(Request $request){		
 		$query = \DB::table('product')
 		->where('CatId', $request->id)
 		->get();		
