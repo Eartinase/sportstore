@@ -26,13 +26,25 @@ class CategoryController extends Controller
 		
 		$query = \DB::table('product')
 		->where('CatId', $request->id)
-		->get();
+		->get();		
 
-		if (!empty ( $query )) {
-			return view('check',$query);
-		}	
+		if ($query->count()) {
+			$catName = \DB::table('category')
+			->where('CatId',$request->id)
+			->get();
+
+			foreach ($catName as $c) {
+				$catName = $c->Name;
+			}
+
+			$data = array(
+				"query"=>$query, 
+				"catName" =>$catName
+			);
+			return view('check',$data);
+		}
+
 		\DB::table('category')->where('CatId', '=', $request->id)->delete();
-
 		return redirect('/category');
 	}
 

@@ -15,10 +15,34 @@
 </head>
 <body>
  @include('navbar')
-  <h1>Product with </h1>
+ <div class="container">
+  <h1 align="center">Product with {{$catName}} Category</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col"> Product Name </th>
+        <th scope="col"> Action </th>
+      </tr>
+    </thead>
+    
+    <tbody>
 
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  </body>
-  </html>
+      <?php $i=1 ?>
+      @foreach ($query as $d)
+      <tr>
+        <td>{{$i++}}</td>
+        <td>{{$d->Name}}</td>
+        <td>
+          <button type="button" class="buttValue btn btn-info" data-toggle="modal" data-target="#EditCat" value="{{ $d->CatId }}">Edit</button>&nbsp;
+          <button class="btn btn-danger" name="id" value="{{$d->CatId}}" form="delCat">Delete</button>
+        </td>
+      </tr>
+      @endforeach
+    </tbody>
+  </table>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -35,8 +35,8 @@
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col"> Category </td>
-        <th scope="col"> Action </td>
+        <th scope="col"> Category </th>
+        <th scope="col"> Action </th>
       </tr>
     </thead>
     
